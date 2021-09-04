@@ -1,4 +1,20 @@
-.body {
+body {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        ;
     background-image: url('../images/pattern-background-mobile.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
+#panel {
+    background-color: white;
+    font-family: 'Red Hat Display' , sans-serif;
+
+}
+
+h1 {
+    text-align: center;
+}
