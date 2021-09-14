@@ -1,20 +1,157 @@
 body {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-areas: 
-        ;
-    background-image: url('../images/pattern-background-mobile.svg');
+    background-image: url("../images/pattern-background-desktop.svg");
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-color:hsl(225, 100%, 98%);
+    background-size: 100%;
+}
+#panelimg {
+    width: 100%;
+    border-radius: 25px 25px 0 0;
 }
 
 #panel {
     background-color: white;
     font-family: 'Red Hat Display' , sans-serif;
-
+    width: 90%;
+    max-width: 400px;
+    min-width: 350px;
+    height: 75%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 25px 25px 25px 25px;
+    text-align: center;
+    max-height: 600px;
+    min-height: 600px;
 }
 
-h1 {
+#paneltitle {
+    font-size: 22px;
+    margin-top: 35px;
+    margin-bottom: 25px;
+    color: #1F244B;
+}
+
+#paneldescription {
     text-align: center;
+    line-height: 25px;
+    margin: 10px 10% 10px 10%;
+    color: #7E8390;
+    border-bottom: 1px solid #FEFEFE;
+    padding-bottom: 15px;
+}
+
+#subscription{
+    display: inline;
+    
+}
+
+#pricecontainer {
+    width: 90%;
+    height: 85px;
+    background-color: #F8F9FE;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+        "music plan swap"
+        "music price swap";
+    place-items: center;
+    border-radius: 15px;
+}
+
+#musicpic {
+    grid-area: music;
+    width: 50px;
+    height: 50px;
+    margin: auto;
+    padding-bottom: 8px;
+}
+
+#annualplan {
+    font-weight: 700;
+    width: 110%;
+    text-align: center;
+    font-size: 15px;
+    position: relative;
+    top: 10px;
+    
+}
+
+#price {
+    text-align: center;
+    font-size: 16px;
+    color: #9EA4C1;
+    position: relative;
+    bottom: 15px;
+    width: 100%;
+}
+
+#changeplan {
+    grid-area: swap;
+    font-weight: 700;
+    font-size: 12px;
+    color: #5850BD;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#proceed {
+    background-color: hsl(245, 75%, 52%);
+    display: block;
+    color: white;
+    text-decoration: none;
+    width: 90%;
+    margin: auto;
+    margin-top: 25px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px 1px hsl(224, 23%, 55%);
+}
+
+#cancel {
+    color: hsl(224, 23%, 55%);
+    text-decoration: none;
+    display: grid;
+    align-items: center;
+    height: 60px;
+}
+
+@media only screen and (min-width: 992px){
+    body {
+        background-image: url("../images/pattern-background-mobile.svg")
+    }
+
+    #panel{
+        max-width: 600px;
+        min-height: 800px;
+    }
+
+    #paneldescription {
+        max-width: 300px;
+        margin: auto;
+        font-size: 20px;
+    }
+    
+    #pricecontainer {
+        max-width: 400px;
+        margin-top: 30px;
+    }
+
+    #proceed {
+        max-width: 400px;
+        margin-top: 40px;
+    }
+
+    #cancel {
+        margin-top: 25px;
+    }
 }
